@@ -2,7 +2,7 @@
  * a file that implements the wordbreaker class
 */
 
-#include "workbreaker.h"
+#include "wordbreaker.h"
 #include <iostream>
 #include <vector>
 #include <sstream>
