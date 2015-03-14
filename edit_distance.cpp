@@ -20,6 +20,9 @@ int EditDistance::getEditDistance(const string&text,const string& pattern)
             //D[i][j] = min(D[i-1][j-1] +mathCost(pattern[i-1],text[j-1]), D[i-1][j]+1 );
             D[i][j] = min(D[i-1][j-1] + (pattern[i-1]==text[j-1]? 0 :1) , D[i-1][j]+1 );
             D[i][j] = min (D[i][j] , D[i][j-1] + 1 );
+            /* check for trasposition */
+            if( i >1 && j >1 && text[j-1]==pattern[i-2] && pattern[i-1]==text[j-2])
+                D[i][j] = min(D[i][j] , D[i-2][j-2] + (pattern[i-1]==text[j-1]? 0 : 1));
        //     cout <<D[i][j]<<endl;
 
         }
