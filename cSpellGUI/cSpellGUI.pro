@@ -8,20 +8,13 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
+TARGET = cSpellGUI
 TEMPLATE = app
 
-CONFIG +=qt
 
-SOURCES += wordbreaker.cpp \
-    mainwindow.cpp \
-    edit_distance.cpp \
-    main.cpp
+SOURCES += main.cpp\
+        mainwindow.cpp
 
-HEADERS +=edit_distance.h \
-    mainwindow.h \
-    wordbreaker.h
+HEADERS  += mainwindow.h
 
-TARGET = c_spell
-
-FORMS += \
-    mainwindow.ui
+FORMS    += mainwindow.ui
