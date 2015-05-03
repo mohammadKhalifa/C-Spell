@@ -13,7 +13,7 @@ public:
 	bool contains(const string& word);
 	bool isEmpty();
 	void addWord(const string& word);
-
+	const set<string> & getWords();
 private:
 	set<string> words;
 	string toLower(string str);

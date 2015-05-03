@@ -15,12 +15,13 @@ CONFIG +=qt
 SOURCES += wordbreaker.cpp \
     mainwindow.cpp \
     edit_distance.cpp \
-    main.cpp
+    main.cpp \
+    lexicon.cpp
 
 HEADERS +=edit_distance.h \
     mainwindow.h \
-    wordbreaker.h
-
+    wordbreaker.h \
+    lexicon.h
 TARGET = c_spell
 
 FORMS += \

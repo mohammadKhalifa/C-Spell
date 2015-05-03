@@ -1,12 +1,14 @@
 #include "lexicon.h"
 #include <iostream>
 #include <fstream>
+#include <QDebug>
 using namespace std;
 
 
 
 Lexicon::Lexicon(const string &dictFileName) {
-	ifstream inFile(dictFileName);
+    cerr <<dictFileName<<endl;
+    ifstream inFile(dictFileName.c_str());
 	if (!inFile) {
 		cerr <<"Error opening file!"<<endl;
 	}
@@ -39,4 +41,7 @@ string Lexicon::toLower(string str)
 		ret[i] = tolower(ret[i]);
 
 	return ret;
+}
+const set<string> &Lexicon::getWords() {
+  return words;
 }
