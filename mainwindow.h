@@ -30,21 +30,31 @@ public:
    * with the color specified by brush
   */
   void highlightWord(int beg , int end ,const QBrush &brush = Qt::yellow);
-
+  void highlightWord(QTextCursor & cursor , const QBrush & brush = Qt::yellow);
 
   const QString getCurrentTextEditWord(QTextCursor &cursor);
 
-  /*
-   * bool isValidWord(string word)
+  /* Usage
+   * if (isValidWord(word)) ...
    * this method returns true if the word passed to
    * it is a valid word i.e contains only alphanumeric
    * characters and with size larger than 0
   */
   bool isValidWord (string word);
 
-  /* this method returns a vector of all possible
+  /* Usage
+   * vector<string> vs = getCandidates(word);
+   * this method returns a vector of all possible
    * corrections to this word */
-  vector<string> getCandidates(string word , int ed=EDITDISTANCE);
+  vector<string> getCandidates(string word , int mxEditDistance=MAXEDITDISTANCE);
+
+  /* Usage
+   * vector<int> v =  getFirstLetterPositions (text);
+   * this method returns a vector of positions of
+   * first letter of all sentences in text
+   */
+
+  vector<int> getFirstLetterPositions (const string& text);
     ~MainWindow();
 
 private slots:
@@ -56,11 +66,18 @@ private slots:
 
     void on_actionSave_triggered();
 
+    void on_ignoreButton_clicked();
+
+    void on_replaceButton_clicked();
+
+    void on_caseButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     Lexicon *lex;
-    static const int MAXCANDIDATES = 100;
-    static const int EDITDISTANCE = 2;
+    WordBreaker *wb;
+    static const int MAXCANDIDATES = 10;
+    static const int MAXEDITDISTANCE = 2;
 };
 
 #endif // MAINWINDOW_H
