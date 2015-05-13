@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>781</width>
+    <width>798</width>
     <height>575</height>
    </rect>
   </property>
@@ -53,21 +53,21 @@
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>31</x>
-      <y>101</y>
-      <width>721</width>
-      <height>411</height>
+      <x>30</x>
+      <y>120</y>
+      <width>741</width>
+      <height>401</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
       <widget class="QLabel" name="label_2">
        <property name="text">
         <string>Your Text Here :</string>
        </property>
       </widget>
      </item>
-     <item>
+     <item row="1" column="0">
       <widget class="QTextEdit" name="textEdit">
        <property name="font">
         <font>
@@ -88,13 +88,13 @@
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>650</x>
+      <x>630</x>
       <y>30</y>
-      <width>101</width>
-      <height>62</height>
+      <width>131</width>
+      <height>95</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_2">
+    <layout class="QVBoxLayout" name="verticalLayout">
      <item>
       <widget class="QPushButton" name="ignoreButton">
        <property name="text">
@@ -109,18 +109,25 @@
        </property>
       </widget>
      </item>
+     <item>
+      <widget class="QPushButton" name="AddToDicButton">
+       <property name="text">
+        <string>Add to Dictionary</string>
+       </property>
+      </widget>
+     </item>
     </layout>
    </widget>
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>460</x>
-      <y>10</y>
-      <width>181</width>
-      <height>103</height>
+      <x>461</x>
+      <y>11</y>
+      <width>151</width>
+      <height>111</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_3">
+    <layout class="QVBoxLayout" name="verticalLayout_2">
      <item>
       <widget class="QLabel" name="label">
        <property name="text">
@@ -144,13 +151,20 @@
      </item>
     </layout>
    </widget>
+   <zorder>layoutWidget</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>AddToDicButton</zorder>
+   <zorder>replaceButton</zorder>
+   <zorder>listWidget</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>781</width>
+     <width>798</width>
      <height>25</height>
     </rect>
    </property>

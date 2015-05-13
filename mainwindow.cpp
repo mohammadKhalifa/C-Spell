@@ -147,8 +147,8 @@ void MainWindow::on_replaceButton_clicked()
     QTextCursor cursor = ui->textEdit->textCursor();
     getCurrentTextEditWord(cursor);
     QString selectedWord = ui->listWidget->currentItem()->text();
-    cursor.insertText(selectedWord);
     highlightWord(cursor,Qt::transparent);
+    cursor.insertText(selectedWord);
     ui->listWidget->clear();
 }
 
@@ -181,4 +181,16 @@ void MainWindow::on_caseButton_clicked()
         cursor.insertText(str);
 
     }
+}
+
+void MainWindow::on_AddToDicButton_clicked()
+{
+    QTextCursor cursor = ui->textEdit->textCursor();
+    string word = getCurrentTextEditWord(cursor).toStdString();
+    highlightWord(cursor,Qt::transparent);
+    ui->listWidget->clear();
+    lex->addWord(word);
+    ofstream out(dictFileName.c_str());
+    out << word <<endl;
+    out.close();
 }

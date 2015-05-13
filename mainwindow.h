@@ -72,6 +72,8 @@ private slots:
 
     void on_caseButton_clicked();
 
+    void on_AddToDicButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     Lexicon *lex;
