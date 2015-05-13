@@ -74,11 +74,13 @@ private slots:
 
     void on_AddToDicButton_clicked();
 
+    void on_actionReset_triggered();
+
 private:
     Ui::MainWindow *ui;
     Lexicon *lex;
     WordBreaker *wb;
-    static const int MAXCANDIDATES = 10;
+    static const int MAXCANDIDATES = 25;
     static const int MAXEDITDISTANCE = 2;
 };
 

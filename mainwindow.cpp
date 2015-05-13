@@ -4,7 +4,7 @@
 #include <QDebug>
 // dictionary file name
 const string dictFileName = QDir::currentPath().toStdString() + "/full_dict.txt";
-
+const string orgDictFileName = QDir::currentPath().toStdString() + "/original_dict.txt";
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -190,7 +190,19 @@ void MainWindow::on_AddToDicButton_clicked()
     highlightWord(cursor,Qt::transparent);
     ui->listWidget->clear();
     lex->addWord(word);
-    ofstream out(dictFileName.c_str());
+    ofstream out(dictFileName.c_str(),std::ios_base::app);
     out << word <<endl;
     out.close();
+}
+
+void MainWindow::on_actionReset_triggered()
+{
+    ofstream out(dictFileName.c_str());
+    ifstream in (orgDictFileName.c_str());
+    string word;
+    while(in >>word)
+        out <<word<<endl;
+    in.close();
+    out.close();
+    QMessageBox::information(this,"Done","Dictionary was reset successfully.");
 }
