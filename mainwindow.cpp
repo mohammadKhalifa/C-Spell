@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "edit_distance.h"
+#include "about.h"
 #include <QDebug>
 // dictionary file name
 const string dictFileName = QDir::currentPath().toStdString() + "/full_dict.txt";
@@ -211,4 +212,10 @@ void MainWindow::on_actionReset_triggered()
 void MainWindow::on_actionClear_triggered()
 {
     ui->textEdit->clear();
+}
+
+void MainWindow::on_actionAbout_triggered()
+{
+    About *w = new About();
+    w->show();
 }

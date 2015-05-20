@@ -16,13 +16,16 @@ SOURCES += wordbreaker.cpp \
     mainwindow.cpp \
     edit_distance.cpp \
     main.cpp \
-    lexicon.cpp
+    lexicon.cpp \
+    about.cpp
 
 HEADERS +=edit_distance.h \
     mainwindow.h \
     wordbreaker.h \
-    lexicon.h
+    lexicon.h \
+    about.h
 TARGET = c_spell
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    about.ui
