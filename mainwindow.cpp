@@ -72,8 +72,9 @@ void MainWindow::on_actionSave_triggered()
         if(!file.open(QIODevice::WriteOnly)) {
             QMessageBox::critical(this,tr("Error"),tr("Can't Save file!"));
         }
-    //    file << ui->textEdit->toPlainText();
-
+        QTextStream stream(&file);
+        stream << ui->textEdit->toPlainText();
+        file.close();
     }
 }
 
@@ -205,4 +206,9 @@ void MainWindow::on_actionReset_triggered()
     in.close();
     out.close();
     QMessageBox::information(this,"Done","Dictionary was reset successfully.");
+}
+
+void MainWindow::on_actionClear_triggered()
+{
+    ui->textEdit->clear();
 }

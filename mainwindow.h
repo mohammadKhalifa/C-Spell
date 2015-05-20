@@ -76,6 +76,8 @@ private slots:
 
     void on_actionReset_triggered();
 
+    void on_actionClear_triggered();
+
 private:
     Ui::MainWindow *ui;
     Lexicon *lex;

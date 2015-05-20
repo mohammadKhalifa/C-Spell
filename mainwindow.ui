@@ -193,10 +193,17 @@
      <string>Settings</string>
     </property>
    </widget>
+   <widget class="QMenu" name="menuText">
+    <property name="title">
+     <string>Text</string>
+    </property>
+    <addaction name="actionClear"/>
+   </widget>
    <addaction name="menuFile"/>
    <addaction name="menuSetings"/>
    <addaction name="menuDictionary"/>
    <addaction name="menuLanguage"/>
+   <addaction name="menuText"/>
    <addaction name="menuHelp"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
@@ -233,6 +240,11 @@
   <action name="actionChoose_Language">
    <property name="text">
     <string>Choose Language</string>
+   </property>
+  </action>
+  <action name="actionClear">
+   <property name="text">
+    <string>Clear</string>
    </property>
   </action>
  </widget>
