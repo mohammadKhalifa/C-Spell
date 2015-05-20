@@ -17,7 +17,7 @@
    <property name="geometry">
     <rect>
      <x>-10</x>
-     <y>60</y>
+     <y>80</y>
      <width>301</width>
      <height>151</height>
     </rect>
@@ -30,16 +30,16 @@
    <property name="geometry">
     <rect>
      <x>80</x>
-     <y>20</y>
+     <y>10</y>
      <width>131</width>
-     <height>71</height>
+     <height>111</height>
     </rect>
    </property>
    <property name="text">
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>../Desktop/Chessboard-128.png</pixmap>
+    <pixmap>../Desktop/chess.png</pixmap>
    </property>
   </widget>
   <widget class="QPushButton" name="okButton">

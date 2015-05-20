@@ -34,11 +34,11 @@ public:
         About->resize(293, 240);
         label = new QLabel(About);
         label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(-10, 60, 301, 151));
+        label->setGeometry(QRect(-10, 80, 301, 151));
         label_2 = new QLabel(About);
         label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(80, 20, 131, 71));
-        label_2->setPixmap(QPixmap(QString::fromUtf8("../Desktop/Chessboard-128.png")));
+        label_2->setGeometry(QRect(80, 10, 131, 111));
+        label_2->setPixmap(QPixmap(QString::fromUtf8("../Desktop/chess.png")));
         okButton = new QPushButton(About);
         okButton->setObjectName(QStringLiteral("okButton"));
         okButton->setGeometry(QRect(100, 190, 99, 27));
